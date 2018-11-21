@@ -1,0 +1,84 @@
+	html, body{
+		      height:100%;
+		}
+		body {
+			background-image: url("../pic/background_5.jpg");
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-position:center;
+			background-size: cover;
+			margin:0; padding:0;
+			color: white;
+			font-family: DFKai-sb;
+		}
+		h1,div {
+			margin:0; padding:0;
+		}
+		.box {
+			height: 50%;
+			float:left;
+			display: inline-block;
+			min-width: 350px;
+		}
+		#top {
+			height: 40%;
+			width: 100%;
+			background-color: rgba(100,100,100,0.3);
+			text-align: center;
+		}
+		#middle {
+			height: 60%;
+		}
+		#box1 {
+			width: 40%;
+			background-color: rgba(110,211,207,0.8);
+		}
+		#box1:hover {
+			background-color: rgba(110,211,207,1);
+		}
+		#box2 {
+			width: 60%;
+			background-color: rgba(144,104,190,0.8);
+		}
+		#box2:hover {
+			background-color: rgba(144,104,190,1);
+		}
+		#box3 {
+			width: 60%;
+			background-color: rgba(255,90,9,0.8);
+		}
+		#box3:hover {
+			background-color: rgba(255,90,9,1);
+		}
+		#box4 {
+			width: 40%;
+			background-color: rgba(247,183,51,0.8);
+		}
+		#box4:hover {
+			background-color: rgba(247,183,51,1);
+		}
+		.nouse {
+			height: 30%;
+		}
+		.content {
+			margin-left: 5em;
+		}
+		.title {
+			font-size: 30px;
+			font-weight: bold;
+			font-weight: 500;
+			display: block;
+		}
+		.bar {
+			background-color: white;
+			height: 3px;
+			width: 200px;
+			display: block;
+			border-radius:50px;
+			margin: 20px 0px 20px 0;
+		}
+		.detail {
+			font-size: 15px;
+			font-weight: bold;
+			display: block;
+		}

@@ -1,0 +1,65 @@
+	#top {
+		background-color: rgba(110,211,207,0.8);
+	}
+	
+	.sbutton {
+		border:0px solid #FFFFFF;
+		border-radius: 20px;
+		font-size:15px;
+		font-family:georgia, serif;
+		padding: 0 10px 0 10px;
+		color: rgba(100,100,100,0.8);
+		background-color: rgba(200,230,250,0.8);
+	}
+	.sbutton:hover {
+		background-color: rgba(150,180,200,0.8);
+	}
+	.sbutton:active {
+		border:2px solid gray;
+	}
+	.sbutton:disabled {
+		background-color: gray;
+	}
+	
+	table {
+		width: 100%;
+		background-color: rgba(240,245,240,0.9);
+		color: black;
+	}
+	td,th {
+		height : 25px;
+		text-align :center;
+		border-bottom:3px solid white;
+	}
+	th {
+		text-align :center;
+		border-bottom:3px solid white;
+		background-color: rgba(150,150,150,0.8);
+		border-top:3px solid white;
+	}
+	
+	.onbtn {
+		width: 3em;
+		background-color: rgba(46,139,87,1);
+	
+	}
+	.offbtn {
+		width: 3em;
+		background-color: rgba(255,0,0,1);
+	
+	}
+	
+	.inputBox {
+		Background-color: rgba(200,200,200,0.9);
+		border-width: 0 0 0 0;
+		padding-left: 5px;
+		text-align:center;
+		width: 6em;
+	}
+	
+	.ng-invalid{
+		color: red;
+	}
+	#myForm .ng-invalid-required{
+		background-color: pink;
+	}

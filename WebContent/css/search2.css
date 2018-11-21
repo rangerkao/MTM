@@ -1,0 +1,51 @@
+	#top {
+		background-color: rgba(255,90,9,0.8);
+	}
+
+	#conditionBox {
+		display: inline-block;
+		float: left;
+		margin-left: 20px;
+		min-width: 1400px;
+		position: relative;
+		top:-10px;
+		background-color: rgba(255,245,170,0.9);
+	}
+	
+	.condition {
+		/* display: inline-block;
+		height: 80%;
+		text-align: center;
+		vertical-align: middle;
+		padding-top: 10px; */
+		height:30px;
+		margin-top: 10px;
+		background-color: rgba(235,217,244,0.9);
+		border-radius: 5px;
+	}
+	
+	.value {
+		border-width: 0 0 2px 0 ;
+		font-size: 25px; 
+		background: transparent;
+		color: black;
+		padding-left: 1em;
+		border-radius:3px;
+		border-bottom-color:black;
+	}
+	.date {
+		border-width: 0 0 2px 0 ;
+		font-size: 25px; 
+		background: transparent;
+		color: black;
+		border-radius:3px;
+		width: 130px;
+		border-bottom-color:black;
+	} 
+	#datepicker{
+		display: inline-block;
+		margin-left: 20px;
+		color: black;
+		font-size: 25px;  
+	}
+

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+    
+<struts>
+    <package name="common" extends="struts-default">
+   	 	<!-- 找不到Action時的回應 -->
+    	<default-action-ref name="index"/>
+    	
+    	<global-results>
+			<result name="input">web/index.jsp</result>
+		</global-results>
+
+        <action name="index" class="indexAction" method="index">
+            <result name="success">web/index.jsp</result>
+        </action>       
+        <action name="*Link" method="{1}" class="indexAction" >
+            <result name="admin">web/admin.jsp</result>
+            <result name="search">web/search.jsp</result>
+            <result name="search2">web/search2.jsp</result>
+            <result name="welcome">web/welcome.jsp</result>
+            <result name="logQuery">web/logQuery.jsp</result>
+        </action>       
+        
+        
+      <!--   <action name="login" class="loginAction" method="login">
+            <result name="success">web/welcome.jsp</result>
+            驗證失敗時回傳input
+            <result name="input">web/index.jsp</result>
+        </action>       
+        <action name="logout" class="logoutAction" method="logout">  
+        	<result name="success">web/index.jsp</result>
+        </action> -->
+        
+        <action name="login" class="logAction" method="login">
+            <result name="success">web/welcome.jsp</result>
+           <!--  驗證失敗時回傳input -->
+            <result name="input">web/index.jsp</result>
+        </action>       
+        <action name="logout" class="logAction" method="logout">  
+        	<result name="success">web/index.jsp</result>
+        </action>
+        
+        <!-- Escel 下載 -->
+		<action name="exportDatas" class="searchAction"  method="exportDatas">  
+            <result name="success" type="stream">  
+                <!-- 下载文件的类型，如果你不知道是什么格式，可以去 tomcat\conf\web.xml下找   -->
+                <param name="contentType">application/vnd.ms-excel</param>  
+                <!-- 返回流 excelStream为action中的流变量名称   -->
+                <param name="inputName">excelStream</param>  
+                <!-- attachment 这个位置的参数挺特殊的，可以设置成下载时，是否出现个下载提示框，或者直接下载之类的。  
+                fileName指定生成的文件名字(适合动态生成文件名，比如做报表时，一般都要说是几月的统计数据之类)为action中变量   -->
+                <!--指定文件以附件形式弹出下载对话框;filename="123.gif" 指定下载对话框中显示的文件名称;  
+					文件下载的处理方式，包括内联(inline)和附件(attachment)两种方式，而附件方式会弹出文件保存对话框，否则浏览器会尝试直接显示文件。  
+					如果直接写filename="123.gif"，默认情况是代表inline，浏览器会尝试自动打开它，等价于这样的写法：inline; filename="123.gif"-->
+                <param name="contentDisposition"> attachment;filename=${excelFileName} </param>  
+                <param name="bufferSize">1024</param>
+                  
+            </result>  
+        </action>
+        <action name="exportUsageDatas" class="searchAction"  method="exportUsageDatas">  
+            <result name="success" type="stream">  
+                <!-- 下载文件的类型，如果你不知道是什么格式，可以去 tomcat\conf\web.xml下找   -->
+                <param name="contentType">application/vnd.ms-excel</param>  
+                <!-- 返回流 excelStream为action中的流变量名称   -->
+                <param name="inputName">excelStream</param>  
+                <!-- attachment 这个位置的参数挺特殊的，可以设置成下载时，是否出现个下载提示框，或者直接下载之类的。  
+                fileName指定生成的文件名字(适合动态生成文件名，比如做报表时，一般都要说是几月的统计数据之类)为action中变量   -->
+                <!--指定文件以附件形式弹出下载对话框;filename="123.gif" 指定下载对话框中显示的文件名称;  
+					文件下载的处理方式，包括内联(inline)和附件(attachment)两种方式，而附件方式会弹出文件保存对话框，否则浏览器会尝试直接显示文件。  
+					如果直接写filename="123.gif"，默认情况是代表inline，浏览器会尝试自动打开它，等价于这样的写法：inline; filename="123.gif"-->
+                <param name="contentDisposition"> attachment;filename=${excelFileName} </param>  
+                <param name="bufferSize">1024</param>
+                  
+            </result>  
+        </action>
+    </package>
+    <package name="Ajax" extends="json-default">
+    	<global-results>
+			<result type="json" name="success"><param name="root">result</param></result>
+			<result type="json" name="needLogin"><param name="root">needLogin</param></result>
+			<result name="input">index.jsp</result>
+		</global-results>
+		
+		<!-- 納為Spring管理後 -->
+		<action name="queryCount" class="searchAction" method="queryCount"></action>
+		<action name="queryDatas" class="searchAction" method="queryDatas"></action>
+		<action name="queryUsageCount" class="searchAction" method="queryUsageCount"></action>
+		<action name="queryUsageDatas" class="searchAction" method="queryUsageDatas"></action>
+		
+		<action name="queryLogCount" class="logAction" method="queryLogCount"></action>
+		<action name="queryLogDatas" class="logAction" method="queryLogDatas"></action>
+		
+		<action name="queryAllDatas" class="searchAction" method="queryAllDatas"></action>
+		
+		<action name="getDownloadFlag" class="searchAction" method="getDownloadFlag"></action>
+		
+		<action name="getSession" class="cacheAction" method="getSession"></action>
+		
+		
+		<action name="getSessionStatus" class="adminAction" method="getSessionStatus"></action>
+		
+		<action name="queryPermission" class="adminAction" method="queryPermission"></action>
+		<action name="queryUserList" class="adminAction" method="queryUserList"></action>	
+		<action name="queryUser" class="adminAction" method="queryUser"></action>	
+		<action name="updatePermission" class="adminAction" method="updatePermission"></action>
+		<action name="newAccount" class="adminAction" method="newAccount"></action>
+		<action name="changePassword" class="adminAction" method="changePassword"></action>
+		<action name="queryUserAction" class="adminAction" method="queryUserAction"></action>
+		
+		<action name="executeProvision" class="provisionAction" method="executeProvision"></action>
+    </package>
+    
+    
+</struts>

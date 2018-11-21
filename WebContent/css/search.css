@@ -1,0 +1,44 @@
+	#top {
+		background-color: rgba(144,104,190,0.8);
+	}
+
+	#conditionBox {
+		min-width: 100px;
+		display: inline-block;
+		float: left;
+		margin-left: 20px;
+		position: relative;
+		top:-10px;
+	
+	}
+	
+	.condition {
+		/* display: inline-block;
+		height: 80%;
+		text-align: center;
+		vertical-align: middle;
+		padding-top: 10px; */
+		height:30px;
+		margin-top: 10px;
+		background-color: rgba(235,217,244,0.9);
+		border-radius: 5px;
+		
+	}
+	
+	#value {
+		border-width: 0 0 2px 0 ;
+		font-size: 25px; 
+		background: transparent;
+		color: black;
+		padding-left: 5px;
+		border-radius:3px;
+		border-bottom-color:black;
+	}
+	
+	input[type="checkbox"]{
+		height: 20px;
+		width: 50px;
+	}
+	
+	
+		

@@ -1,0 +1,118 @@
+	#top {
+		background-color: rgba(255,90,9,0.8);
+	}
+
+	#conditionBox {
+		min-width: 100px;
+		display: inline-block;
+		float: left;
+		margin-left: 20px;
+	
+	}
+	
+	.condition {
+		/* display: inline-block;
+		height: 80%;
+		text-align: center;
+		vertical-align: middle;
+		padding-top: 10px; */
+		height:30px;
+		margin-top: 10px;
+		background-color: rgba(235,217,244,0.9);
+		border-radius: 5px;
+	}
+	
+	.sbutton {
+		border:0px solid #FFFFFF;
+		border-radius: 20px;
+		font-size:15px;
+		font-family:georgia, serif;
+		padding: 0 10px 0 10px;
+		color: rgba(100,100,100,0.8);
+		background-color: rgba(200,230,250,0.8);
+	}
+	.sbutton:hover {
+		background-color: rgba(150,180,200,0.8);
+	}
+	.sbutton:active {
+		border:2px solid gray;
+	}
+	
+	#pageBox {
+		min-width: 100px;
+		display: inline-block;
+		float: left;
+		width: 100%;
+		background-color: rgba(185,167,194,0.9);
+		height: 50px;
+		padding-left: 20px;
+	}
+	
+	.pageN {
+		width: 30px; 
+		background-color: transparent;
+		border-color: transparent;
+		text-align: center;
+	}
+	
+	
+	.value {
+		border-width: 0 0 2px 0 ;
+		font-size: 20px; 
+		background: transparent;
+		font-size: 1.1em;
+		color: white;
+		padding-left: 1em;
+		border-radius:3px;
+	}
+	.date {
+		border-width: 0 0 2px 0 ;
+		font-size: 20px; 
+		background: transparent;
+		font-size: 1.1em;
+		color: white;
+		border-radius:3px;
+		width: 130px;
+	}
+	.pageNumber {
+		border-width: 0 0 2px 0 ;
+		font-size: 20px; 
+		background: transparent;
+		font-size: 1.1em;
+		color: white;
+		border-radius:3px;
+		width: 40px;
+		text-align: center;
+	}
+	
+	
+	
+	#content{
+		/* height: 500px; */
+		background-color: rgba(144,104,190,0.8);
+		z-index: -2;
+	}
+	table {
+		width: 100%;
+		background-color: rgba(240,245,240,0.9);
+		color: black;
+	}
+	#content td,#head th {
+		height : 20px;
+		text-align :center;
+		width: 13%;
+		border-top:3px solid white;
+		border-bottom:3px solid white;
+	}
+	#head th {
+		background-color: rgba(150,150,150,0.8);
+	}
+	
+	#buttom {
+		height: 25px;
+		width:100%;
+		background-color: rgba(144,104,190,0.8);
+		position: fixed;
+		bottom: 0;
+		z-index: -2;
+	}
